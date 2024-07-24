@@ -12,7 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.dam_examen_sustitutorio_inca.databinding.ActivityNotasBinding;
 
-public class NotasActivity extends AppCompatActivity {
+public class NotasActivity extends AppCompatActivity implements NotasInteractionListener {
 
     private ActivityNotasBinding binding;
 
@@ -30,8 +30,21 @@ public class NotasActivity extends AppCompatActivity {
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_notas);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
+    @Override
+    public void editNotaClick(Nota nota) {
+
+    }
+
+    @Override
+    public void eliminaNotaClick(Nota nota) {
+
+    }
+
+    @Override
+    public void favoritaNotaClick(Nota nota) {
+
+    }
 }
